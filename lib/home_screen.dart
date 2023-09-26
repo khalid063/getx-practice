@@ -38,7 +38,41 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
-          )
+          ),
+          Card(
+            child: ListTile(
+              title: Text('GetX Diolog Alert'),
+              subtitle: Text(''),
+              onTap: (){
+                Get.bottomSheet(
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.amberAccent,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      children: [
+                        ListTile(
+                          leading: Icon(Icons.light_mode),
+                          title: Text('Light Theme'),
+                          onTap: (){
+                            //Get.changeTheme(ThemeData.light());
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.light_mode),
+                          title: Text('Dark Theme'),
+                          onTap: (){
+                            //Get.changeTheme(ThemeData.dark());
+                          },
+                        ),
+                      ],
+                    ),
+                  )
+                );
+              },
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
