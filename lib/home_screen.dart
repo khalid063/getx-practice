@@ -18,7 +18,27 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-
+          Card(
+            child: ListTile(
+              title: Text('GetX Diolog Alert'),
+              subtitle: Text(''),
+              onTap: (){
+                Get.defaultDialog(
+                  title: 'Delete Chat',
+                  middleText: 'Are you sure, want to remove',
+                  contentPadding: EdgeInsets.all(10),
+                  textConfirm: 'yes',
+                  textCancel: 'No',
+                  ///content: Text(), for custom design, Can use "Column" also
+                  confirm: TextButton(onPressed: (){
+                    //Navigator.pop(context);
+                    Get.back();
+                  }, child: Text('ok'),),
+                  cancel: TextButton(onPressed: (){}, child: Text('Cancel'),),
+                );
+              },
+            ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
