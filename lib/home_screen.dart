@@ -56,14 +56,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           leading: Icon(Icons.light_mode),
                           title: Text('Light Theme'),
                           onTap: (){
-                            //Get.changeTheme(ThemeData.light());
+                            Get.changeTheme(ThemeData.light());
                           },
                         ),
                         ListTile(
                           leading: Icon(Icons.light_mode),
                           title: Text('Dark Theme'),
                           onTap: (){
-                            //Get.changeTheme(ThemeData.dark());
+                            Get.changeTheme(ThemeData.dark());
                           },
                         ),
                       ],
